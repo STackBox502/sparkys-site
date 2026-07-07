@@ -149,7 +149,9 @@ h1,h2,h3,.logo{font-family:'Fraunces',serif}
 .sec-head h2,.about h2,.footer-cta h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:900}
 
 /* ===== MENU CARDS ===== */
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1120px;margin:0 auto}
+@media (max-width:940px){.menu-grid{grid-template-columns:repeat(2,1fr);max-width:720px}}
+@media (max-width:600px){.menu-grid{grid-template-columns:1fr;max-width:360px}}
 .card{
   background:var(--card);border-radius:var(--radius);padding:34px 28px 26px;
   box-shadow:0 12px 34px rgba(43,27,18,.07);
